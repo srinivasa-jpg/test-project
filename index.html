@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-container">
+        <h1>🌦 Weather Report</h1>
+        <p class="subtitle">Search for a city to view the current weather</p>
+
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name" autocomplete="off">
+            <button id="searchButton">Search</button>
+        </div>
+
+        <p id="loading" class="message hidden">Loading weather data...</p>
+        <p id="errorMessage" class="error hidden">City not found.</p>
+
+        <div id="weatherCard" class="weather-card hidden">
+            <h2 id="cityName"></h2>
+            <img id="weatherIcon" src="" alt="Weather Icon">
+            <div id="temperature" class="temperature">--°C</div>
+            <p id="weatherCondition" class="condition"></p>
+
+            <div class="weather-details">
+                <div class="detail-card"><span>🌡️</span><p>Feels Like</p><strong id="feelsLike">--</strong></div>
+                <div class="detail-card"><span>⬇️</span><p>Min Temp</p><strong id="minTemp">--</strong></div>
+                <div class="detail-card"><span>⬆️</span><p>Max Temp</p><strong id="maxTemp">--</strong></div>
+                <div class="detail-card"><span>💧</span><p>Humidity</p><strong id="humidity">--</strong></div>
+                <div class="detail-card"><span>💨</span><p>Wind Speed</p><strong id="windSpeed">--</strong></div>
+                <div class="detail-card"><span>🎈</span><p>Pressure</p><strong id="pressure">--</strong></div>
+                <div class="detail-card"><span>👁️</span><p>Visibility</p><strong id="visibility">--</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
